@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:background="@color/white">
+
+    <com.ketty.chinesemedicine.component.WindowInsetsFrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="53dp">
+
+    </com.ketty.chinesemedicine.component.WindowInsetsFrameLayout>
+
+    <com.ketty.chinesemedicine.component.BottomNavigationBar
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

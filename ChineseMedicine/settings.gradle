@@ -1,0 +1,32 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url "https://mvn.mob.com/android"
+        }
+        maven { url "https://raw.githubusercontent.com/Pgyer/mvn_repo_pgyer/master" }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url "https://mvn.mob.com/android"
+        }
+        maven { url "https://raw.githubusercontent.com/Pgyer/mvn_repo_pgyer/master" }
+    }
+}
+rootProject.name = "ChineseMedicine"
+include ':app'
+include ':gifloadinglibrary'
+include ':dragable_image_viewer'
+include ':shadowLibrary'
+include ':likeview'

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#8cc8ed</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>-->
+    <color name="defaultColor">#fafafa</color>
+    <color name="lightPink">#f8c2d0</color>
+    <color name="pressPink">#E4B2BE</color>
+    <color name="lightBlue">#a7daf7</color>
+    <color name="pressBlue">#8cc8ed</color>
+    <color name="darkBlue">#79b1d4</color>
+    <color name="seaBlue">#b8f1ed</color>
+    <color name="white">#fff</color>
+    <color name="orange">#f6a77e</color>
+    <color name="lightOrange">#fdc78b</color>
+    <color name="color_f6">#f6f6f6</color>
+    <color name="lightPurple">#d9b8f1</color>
+    <color name="purple">#C392DB</color>
+    <color name="darkPurple">#aeadd5</color>
+    <!--    <color name="gray">#b2b3b5</color>-->
+    <color name="label">#979797</color>
+    <color name="black">#000</color>
+    <color name="lightRed">#f16d7a</color>
+    <color name="roseRed">#f16d7a</color>
+    <!--    <color name="yellow">#f1f1b8</color>-->
+    <color name="lightGreen">#b8f1cc</color>
+    <color name="tabItem_normal">#fafafa</color>
+    <color name="tabItem_press">#f5f5f5</color>
+    <color name="tabText_normal">#919191</color>
+
+    <color name="app_color_grey">#393a3e</color>
+    <color name="app_color_black">#000000</color>
+    <color name="app_color_f6">#f6f6f6</color>
+    <color name="app_color_fa">#fafafa</color>
+    <color name="app_color_divider">#B6B6B6</color>
+    <color name="app_color_c51">#f94c51</color>
+    <color name="app_color_green">#43c117</color>
+    <color name="app_color_53575e">#53575e</color>
+    <color name="app_color_transparent">#00000000</color>
+    <color name="app_color_white">#FFFFFF</color>
+    <color name="app_color_white_transparent">#E0DBDBDB</color>
+    <color name="app_color_blue">#7D7DFF</color>
+    <color name="app_color_9b">#9b9b9b</color>
+    <color name="app_color_e0ff6100">#E0FF6100</color>
+    <color name="app_color_red">#FF0000</color>
+
+    <color name="colorPrimary">#02A8F3</color>
+    <color name="colorPrimaryDark">#2095F2</color>
+    <color name="colorPrimaryTranslucent">#2002A8F3</color>
+    <color name="colorAccent">#02A8F3</color>
+    <color name="colorAccentTranslucent">#2002A8F3</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="red">#F34235</color>
+    <color name="red_light">#FF80AB</color>
+
+    <color name="green">#4BAE4F</color>
+    <color name="green_light">#689F38</color>
+
+    <color name="blue">#2095F2</color>
+    <color name="blue_light">#02A8F3</color>
+    <color name="blue_translucent_dark">#8002A8F3</color>
+    <color name="blue_translucent_light">#882095F2</color>
+
+    <color name="yellow">#FEC006</color>
+    <color name="yellow_light">#FEEA3A</color>
+    <color name="yellow_dark">#ff6200</color>
+
+    <color name="gray">#D0D0D0</color>
+    <color name="gray_dark">#303030</color>
+    <color name="gray_light">#909090</color>
+
+    <color name="gray_d8">#ffd8d8d8</color>
+    <color name="gray_F1EBEB">#595151</color>
+    <color name="color_6f">#6f6f6f</color>
+    <color name="gray_9b">#9B9B9B</color>
+    <color name="black_21">#212121</color>
+
+    <!--<color name="gray_bg">#E7E7E7</color>
+    <color name="gray_line">#EFEFF4</color>
+    <color name="gray_content">#606060</color>-->
+
+    <!--覆层-->
+    <color name="light_translucent">#20000000</color>
+    <color name="dark_translucent">#88000000</color>
+    <color name="white_translucent">#99FFFFFF</color>
+
+    <!--渐变-->
+    <color name="shadow_end_color">#03000000</color>
+    <color name="shadow_start_color">#37000000</color>
+
+    <color name="light">#800de6e8</color>
+
+    <!-- action背景 -->
+    <color name="action_color_blue">#048ad0</color>
+    <color name="action_color_alpha">#99ffffff</color>
+    <color name="action_color_blue_alpha">#9955a8fd</color>
+    <color name="btn_white">#FFFFFF</color>
+    <color name="btn_white_alpha">#66FFFFFF</color>
+    <color name="action_bg_gray">#f7f7f7</color>
+    <color name="action_bg_gray_alpha">#88f7f7f7</color>
+    <color name="gray_hint">#6655a8fd</color>
+    <color name="gray_interest">#B3B3B3</color>
+    <color name="gray_content">#999999</color>
+    <!-- 页面背景 -->
+    <color name="page_bg">#f2f2f2</color>
+    <!-- 页面背景 -->
+    <color name="gray_alp">#33000000</color>
+    <!-- 进度条绿色 -->
+    <color name="progress_green">#97d15c</color>
+    <color name="gray_alpha">#66000000</color>
+
+    <!-- 灰 -->
+    <color name="gray_btn">#e6e6e6</color>
+    <!-- 灰-线 -->
+    <color name="gray_line">#dddddd</color>
+    <!-- 灰-线 -->
+    <color name="gray_bg">#f0eff4</color>
+    <color name="red_txt">#ff6e6e</color>
+    <color name="line">#E5E5E5</color>
+    <color name="white1">#00ffffff</color>
+    <color name="white_found">#66ffffff</color>
+    <color name="green_radio_normal">#689869</color>
+
+    <color name="session_title">#222222</color>
+    <color name="session_time">#b8b8b8</color>
+    <color name="session_divider">#d9d9d9</color>
+    <color name="session_through_content">#888888</color>
+    <color name="session_draft">#ff6666</color>
+    <color name="chatting_item_divider_bg">#ebebeb</color>
+    <color name="text_color_gray">#ABABAB</color>
+    <color name="unread_tv_color">#007aff</color>
+    <color name="chat_link_color">#2fa9ff</color>
+    <color name="chat_msg_title">#545759</color>
+    <color name="chat_text_color">#222222</color>
+    <color name="login_divider_pwd">#bacfd9</color>
+    <color name="btn_normal">#0066cc</color>
+    <color name="btn_disable">#99c2eb</color>
+    <color name="choose_btn_disable">#b6d9f1</color>
+    <color name="btn_pressed">#1a5992</color>
+    <color name="hint_text_color_login_pwd">#a7b4b8</color>
+    <color name="login_divider">#a9a9a9</color>
+    <color name="text_color_light_gray">#777777</color>
+    <color name="text_color_dark">#222222</color>
+    <color name="border">#d9d9d9</color>
+    <color name="tips_bg">#2aa3e9</color>
+    <color name="session_content">#545759</color>
+    <color name="chat_input_editTextHintColor">#ebebeb</color>
+    <color name="chat_send_button_disabled">#949495</color>
+    <color name="chat_send_button_enabled">#2fa9ff</color>
+    <color name="text_color_tab">#03A9f4</color>
+    <!--popup_menu color-->
+    <color name="transparent_background_button">#11000000</color>
+    <color name="transparent_background">#ffffff</color>
+    <!--tab layout color-->
+    <color name="tab_un_selected">#818181</color>
+    <color name="refuse_btn">#f37700</color>
+
+    <!--listview 删除按钮背景色-->
+    <color name="sign_red">#f93c37</color>
+    <color name="sign_cancel">#d9d9d9</color>
+    <!--dialog 取消颜色-->
+    <color name="dialog_cancel">#7e7e7e</color>
+
+    <color name="backgroundCard">#FFF5F5F5</color>
+    <color name="textColorBg">#eee</color>
+    <color name="textColor">#757575</color>
+    <color name="image_bg">#49A8FC</color>
+    <color name="action_text_color">#00ff00</color>
+
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+
+</resources>

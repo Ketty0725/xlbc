@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <external-path
+            name="camera_photos"
+            path="" />
+        <!--安装包文件存储路径-->
+        <external-files-path
+            name="my_download"
+            path="Download" />
+        <external-path
+            name="."
+            path="." />
+    </paths>
+</resources>

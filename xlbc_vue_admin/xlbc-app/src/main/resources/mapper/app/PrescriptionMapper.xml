@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xlbc.app.mapper.PrescriptionMapper">
+
+    <resultMap type="com.xlbc.app.domain.Prescription" id="PrescriptionResult">
+        <result property="id" column="id"/>
+        <result property="categoryId" column="category_id"/>
+        <result property="prescriptionName" column="prescription_name"/>
+        <result property="provenance" column="provenance"/>
+        <result property="category" column="category"/>
+        <result property="efficacy" column="efficacy"/>
+        <result property="compose" column="compose"/>
+        <result property="usageMethod" column="usage_method"/>
+        <result property="attending" column="attending"/>
+        <result property="notes" column="notes"/>
+        <result property="songTips" column="song_tips"/>
+        <result property="fangYi" column="fang_yi"/>
+        <result property="matchingFeatures" column="matching_features"/>
+        <result property="wield" column="wield"/>
+        <result property="additionAndSubtraction" column="addition_and_subtraction"/>
+        <result property="tailoringIdentification" column="tailoring_identification"/>
+        <result property="literatureAbstracts" column="literature_abstracts"/>
+        <result property="variousDiscussions" column="various_discussions"/>
+    </resultMap>
+
+
+</mapper>

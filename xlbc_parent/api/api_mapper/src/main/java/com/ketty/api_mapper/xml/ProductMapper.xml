@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ketty.api_mapper.ProductMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ketty.api_entity.Product">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="price" property="price" />
+        <result column="info" property="info" />
+        <result column="image" property="image" />
+        <result column="second_level_id" property="secondLevelId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, price, info, image, second_level_id
+    </sql>
+
+</mapper>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/bg_update_top" />
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/sl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/imageView"
+        app:hl_cornerRadius_leftBottom="10dp"
+        app:hl_cornerRadius_rightBottom="10dp"
+        app:hl_layoutBackground="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginHorizontal="15dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是否升级到4.1.1版本？"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <com.ketty.chinesemedicine.component.SizeLimitView
+                android:id="@+id/size_limit_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv_title"
+                app:maxHeight="100dp">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="#999999"/>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </com.ketty.chinesemedicine.component.SizeLimitView>
+
+            <com.ketty.chinesemedicine.component.DownloadProgressView
+                android:id="@+id/download_progress"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/size_limit_view"
+                android:layout_marginVertical="15dp"
+                android:visibility="gone"
+                app:dpv_bg="#FFF1F3"
+                app:dpv_max_progress="100"
+                app:dpv_percentage_text_color2="@color/white"
+                app:dpv_percentage_text_size="14sp"
+                app:dpv_progress="0"
+                app:dpv_progress_bg="#ff2442"
+                tools:dpv_progress="50" />
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/size_limit_view"
+                android:paddingVertical="6dp"
+                android:layout_marginVertical="15dp"
+                app:hl_cornerRadius="50dp"
+                app:hl_layoutBackground="#ff2442">
+
+                <TextView
+                    android:id="@+id/tv_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="立即升级"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+            </com.lihang.ShadowLayout>
+
+        </RelativeLayout>
+
+    </com.lihang.ShadowLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sl_main"
+        android:background="@color/white"/>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/view"
+        android:translationY="-3dp"
+        android:src="@drawable/ic_close_fill"
+        app:tint="@color/white" />
+
+</RelativeLayout>

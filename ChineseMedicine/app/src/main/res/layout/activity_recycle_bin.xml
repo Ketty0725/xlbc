@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".main.mine.RecycleBinActivity"
+    app:layoutDescription="@xml/activity_recycle_bin_scene">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_back"
+                app:tint="#999999" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="回收站"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_manage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="管理"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:background="@color/defaultColor"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <com.ketty.chinesemedicine.component.SmoothCheckBox
+            android:id="@+id/scb"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            app:color_checked="@color/red"
+            app:color_tick="@color/white"
+            app:color_unchecked="@color/white"
+            app:color_unchecked_stroke="#DCDCDC"
+            app:stroke_width="1dp" />
+
+        <TextView
+            android:id="@+id/tv_select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingStart="5dp"
+            android:layout_toEndOf="@+id/scb"
+            android:text="全选"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_recover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/sl_delete"
+            android:layout_alignTop="@+id/sl_delete"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            app:hl_cornerRadius="50dp"
+            app:hl_layoutBackground="#DCDCDC"
+            app:hl_strokeColor="#DCDCDC">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="恢复"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+        </com.lihang.ShadowLayout>
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="10dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            app:clickable="false"
+            app:hl_cornerRadius="50dp"
+            app:hl_layoutBackground="#ffa5a5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="彻底删除"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </com.lihang.ShadowLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

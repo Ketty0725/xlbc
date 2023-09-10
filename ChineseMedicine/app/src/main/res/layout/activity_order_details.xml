@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".main.store.orderform.OrderDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/defaultColor"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/defaultColor">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_back"
+                app:tint="#999999"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text=""
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:layout_above="@+id/bottombar"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_product_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                app:clickable="false"
+                app:hl_layoutBackground="@color/white"
+                app:hl_cornerRadius="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_thumbnail"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="15dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@+id/iv_thumbnail"
+                        android:layout_toStartOf="@+id/tv_price"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignBaseline="@+id/tv_name"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+
+                    <TextView
+                        android:id="@+id/tv_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_below="@+id/tv_price"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textColor="#999999"/>
+
+                </RelativeLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sl_product_info"
+                android:paddingVertical="15dp"
+                android:paddingHorizontal="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                app:clickable="false"
+                app:hl_layoutBackground="@color/white"
+                app:hl_cornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tg_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总金额:"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignBaseline="@+id/tg_total_price"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#ff2442"/>
+
+                    <TextView
+                        android:id="@+id/tg_receipt_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_total_price"
+                        android:layout_marginTop="15dp"
+                        android:text="收货信息:"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+
+                    <TextView
+                        android:id="@+id/tv_receipt_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignBaseline="@+id/tg_receipt_info"
+                        android:gravity="end"
+                        android:textSize="14sp"
+                        android:textColor="#999999"/>
+
+                    <TextView
+                        android:id="@+id/tg_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_receipt_info"
+                        android:layout_marginTop="15dp"
+                        android:text="订单编号:"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+
+                    <TextView
+                        android:id="@+id/tv_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignBaseline="@+id/tg_order_id"
+                        android:gravity="end"
+                        android:textSize="14sp"
+                        android:textColor="#999999"/>
+
+                    <TextView
+                        android:id="@+id/tg_create_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_order_id"
+                        android:layout_marginTop="15dp"
+                        android:text="创建时间:"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+
+                    <TextView
+                        android:id="@+id/tv_create_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignBaseline="@+id/tg_create_time"
+                        android:gravity="end"
+                        android:textSize="14sp"
+                        android:textColor="#999999"/>
+
+                    <TextView
+                        android:id="@+id/tg_shipment_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_create_time"
+                        android:layout_marginTop="15dp"
+                        android:text="发货时间:"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+
+                    <TextView
+                        android:id="@+id/tv_shipment_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignBaseline="@+id/tg_shipment_time"
+                        android:gravity="end"
+                        android:textSize="14sp"
+                        android:textColor="#999999"/>
+
+                    <TextView
+                        android:id="@+id/tg_finish_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_shipment_time"
+                        android:layout_marginTop="15dp"
+                        android:text="成交时间:"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+
+                    <TextView
+                        android:id="@+id/tv_finish_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignBaseline="@+id/tg_finish_time"
+                        android:gravity="end"
+                        android:textSize="14sp"
+                        android:textColor="#999999"/>
+
+                </RelativeLayout>
+
+            </com.lihang.ShadowLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_submit_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="40dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="15dp"
+            app:hl_cornerRadius="50dp"
+            app:hl_layoutBackground="#ffffff"
+            app:hl_strokeColor="#CDCDCD">
+
+            <TextView
+                android:id="@+id/tv_submit_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+        </com.lihang.ShadowLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

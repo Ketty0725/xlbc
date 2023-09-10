@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ketty.api_mapper.PrescriptioncategoryintroduceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ketty.api_entity.Prescriptioncategoryintroduce">
+        <id column="id" property="id" />
+        <result column="category_id" property="categoryId" />
+        <result column="paraphrase" property="paraphrase" />
+        <result column="indications" property="indications" />
+        <result column="notes" property="notes" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, category_id, paraphrase, indications, notes
+    </sql>
+
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xlbc.app.mapper.ChineseherbimageMapper">
+
+    <resultMap type="com.xlbc.app.domain.Chineseherbimage" id="ChineseherbimageResult">
+        <result property="imgId" column="img_id"/>
+        <result property="imgUrl" column="img_url"/>
+        <result property="cbId" column="cb_id"/>
+    </resultMap>
+
+
+</mapper>

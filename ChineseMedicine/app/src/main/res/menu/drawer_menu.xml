@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/item_concern"
+            android:title="关注"
+            android:icon="@drawable/ic_concern"/>
+
+        <item
+            android:id="@+id/item_fans"
+            android:title="粉丝"
+            android:icon="@drawable/ic_fans"/>
+
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/item_browsing_history"
+            android:title="浏览记录"
+            android:icon="@drawable/ic_browsing_history"/>
+
+        <item
+            android:id="@+id/item_recycle_bin"
+            android:title="回收站"
+            android:icon="@drawable/ic_recycle_bin"/>
+
+    </group>
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/item_address"
+            android:title="收货地址"
+            android:icon="@drawable/ic_address"/>
+
+        <item
+            android:id="@+id/item_order_form"
+            android:title="订单"
+            android:icon="@drawable/ic_orderform"/>
+
+        <item
+            android:id="@+id/item_shop_cart"
+            android:title="购物车"
+            android:icon="@drawable/ic_shop_cart"/>
+
+    </group>
+
+</menu>

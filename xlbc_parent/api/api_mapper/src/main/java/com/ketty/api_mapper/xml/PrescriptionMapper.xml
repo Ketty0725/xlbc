@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ketty.api_mapper.PrescriptionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ketty.api_entity.Prescription">
+        <id column="id" property="id" />
+        <result column="second_level_id" property="secondLevelId" />
+        <result column="prescription_name" property="prescriptionName" />
+        <result column="provenance" property="provenance" />
+        <result column="category" property="category" />
+        <result column="efficacy" property="efficacy" />
+        <result column="compose" property="compose" />
+        <result column="usage_method" property="usageMethod" />
+        <result column="attending" property="attending" />
+        <result column="notes" property="notes" />
+        <result column="song_tips" property="songTips" />
+        <result column="fang_yi" property="fangYi" />
+        <result column="matching_features" property="matchingFeatures" />
+        <result column="wield" property="wield" />
+        <result column="addition_and_subtraction" property="additionAndSubtraction" />
+        <result column="tailoring_identification" property="tailoringIdentification" />
+        <result column="literature_abstracts" property="literatureAbstracts" />
+        <result column="various_discussions" property="variousDiscussions" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, second_level_id, prescription_name, provenance, category, efficacy, compose, usage_method, attending, notes, song_tips, fang_yi, matching_features, wield, addition_and_subtraction, tailoring_identification, literature_abstracts, various_discussions
+    </sql>
+
+</mapper>

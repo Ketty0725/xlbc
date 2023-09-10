@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".main.home.FlowCategoryFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/shadow_unfold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        app:hl_shadowColor="@color/app_color_9b"
+        app:hl_shadowLimit="5dp"
+        app:hl_shadowOffsetX="1dp"
+        app:hl_shadowSymmetry="false"
+        app:hl_shadowHiddenRight="true"
+        app:hl_cornerRadius_leftTop="25dp"
+        app:hl_cornerRadius_leftBottom="25dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/ic_arrowhead"
+            android:scaleX="-1"
+            app:tint="#cccccc" />
+
+    </com.lihang.ShadowLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/red"/>
+
+</RelativeLayout>

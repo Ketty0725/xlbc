@@ -1,0 +1,199 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'com.mob.sdk'
+}
+
+MobSDK {
+    appKey ""
+    appSecret ""
+    ShareSDK {
+        loopShare true
+        devInfo {
+            Wechat {
+
+            }
+            WechatMoments {
+
+            }
+            QQ {
+                sortId "1"
+                appId ""
+                appKey ""
+                shareByAppClient true
+                bypassApproval false
+                enable true
+            }
+            QZone {
+                sortId "2"
+                appId ""
+                appKey ""
+                shareByAppClient true
+                bypassApproval false
+                enable true
+            }
+            SinaWeibo {
+
+            }
+        }
+    }
+    MobPush {
+
+    }
+}
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'ChineseMedicine'
+            storeFile file('ChineseMedicine.jks')
+            storePassword 'android'
+            keyPassword 'android'
+        }
+    }
+    namespace 'com.ketty.chinesemedicine'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.ketty.chinesemedicine"
+        minSdk 21
+        targetSdk 32
+        versionCode 3
+        versionName "1.0.2"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            ndk {
+                abiFilters "armeabi","arm64-v8a"
+            }
+            signingConfig signingConfigs.config
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "xlbc_${releaseTime()}.apk"
+                }
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.core:core-ktx:1.9.0'
+        force 'androidx.core:core:1.9.0'
+        force 'androidx.appcompat:appcompat:1.3.1'
+        force "androidx.activity:activity:1.3.1"
+        force "androidx.fragment:fragment:1.3.1"
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyyMMddHHmmss", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    implementation project(':gifloadinglibrary')
+    implementation project(':dragable_image_viewer')
+    implementation project(':shadowLibrary')
+    implementation project(':likeview')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.5.0',{
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    implementation 'io.github.lucksiege:pictureselector:v3.10.6'
+    implementation 'io.github.lucksiege:compress:v3.10.6'
+    implementation 'io.github.lucksiege:ucrop:v3.10.6'
+    implementation 'io.github.lucksiege:camerax:v3.10.6'
+
+    implementation("io.coil-kt:coil:2.1.0")
+    implementation("io.coil-kt:coil-gif:2.1.0")
+    implementation("io.coil-kt:coil-video:2.1.0")
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.1'
+
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
+
+    implementation "com.github.bumptech.glide:glide:4.13.0"
+    implementation 'com.github.bumptech.glide:annotations:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.13.0"
+
+    implementation 'q.rorbin:VerticalTabLayout:1.2.5'
+    implementation 'com.github.yellowcath:VideoProcessor:2.4.2'
+    implementation 'com.android.support:design:28.0.0'
+    implementation  'io.github.scwang90:refresh-layout-kernel:2.0.5'
+    implementation  'io.github.scwang90:refresh-header-classics:2.0.5'
+    implementation  'io.github.scwang90:refresh-footer-classics:2.0.5'
+    implementation  'io.github.scwang90:refresh-header-two-level:2.0.5'
+
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+
+    implementation 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'
+    implementation 'com.tencent:mmkv:1.2.14'
+    api 'com.getkeepsafe.relinker:relinker:1.4.4'
+
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    //解决applayout滑动抖动
+    implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.4'
+
+    implementation 'q.rorbin:VerticalTabLayout:1.2.5'
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'com.squareup.okio:okio:3.0.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.2.0'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.2'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.2.2'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //蒲公英 Android SDK
+    implementation 'com.pgyersdk:sdk:3.0.10'
+
+}

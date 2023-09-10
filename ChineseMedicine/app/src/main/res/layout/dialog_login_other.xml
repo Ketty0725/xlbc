@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:hl_cornerRadius="10dp"
+        app:hl_cornerRadius_leftBottom="0dp"
+        app:hl_cornerRadius_rightBottom="0dp"
+        app:hl_layoutBackground="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="选择登录方式"
+                android:textColor="#333333"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_close"
+                app:tint="#5c5c5c"/>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginTop="11dp"
+                android:background="#dcdcdc"
+                android:layout_below="@+id/iv_close"/>
+
+            <LinearLayout
+                android:id="@+id/ll_l1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:layout_marginBottom="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/view">
+
+                <!--<com.lihang.ShadowLayout
+                    android:id="@+id/ic_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_marginEnd="45dp"
+                    app:hl_cornerRadius="50dp"
+                    app:hl_strokeWith="0.3dp"
+                    app:hl_strokeColor="#dcdcdc">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_qq_color"/>
+
+                </com.lihang.ShadowLayout>-->
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/ic_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    app:hl_cornerRadius="50dp"
+                    app:hl_strokeWith="0.3dp"
+                    app:hl_strokeColor="#dcdcdc">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_phone"/>
+
+                </com.lihang.ShadowLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/ll_l1"
+                android:layout_marginBottom="31dp"
+                android:orientation="horizontal">
+
+                <com.ketty.chinesemedicine.component.SmoothCheckBox
+                    android:id="@+id/scb"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    app:stroke_width="1dp"
+                    app:color_checked="@color/red"
+                    app:color_tick="@color/white"
+                    app:color_unchecked="@color/white"
+                    app:color_unchecked_stroke="#666666"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="我已阅读并同意 "
+                    android:textSize="9sp"
+                    android:textColor="#adadad"/>
+
+                <TextView
+                    android:id="@+id/user_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="《 用户协议 》"
+                    android:textSize="9sp"
+                    android:textColor="#5d92de"/>
+
+                <TextView
+                    android:id="@+id/privacy_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="《 隐私政策 》"
+                    android:textSize="9sp"
+                    android:textColor="#5d92de"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.lihang.ShadowLayout>
+
+</RelativeLayout>

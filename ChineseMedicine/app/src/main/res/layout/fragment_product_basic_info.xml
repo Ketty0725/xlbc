@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#FFEEC9"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:text="温馨提示：商品包装因厂家更换频繁，如有不符请以实物为准"
+                android:textColor="#E68A1B"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f7f7f7"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="13dp">
+
+                <TextView
+                    android:id="@+id/tv_sys_common_name"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="通用名"
+                    android:textColor="#B4B4B4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_common_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_sys_common_name"
+                    android:layout_toEndOf="@+id/tv_sys_common_name"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_sys_brand"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sys_common_name"
+                    android:layout_marginTop="15dp"
+                    android:text="品牌"
+                    android:textColor="#B4B4B4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_sys_brand"
+                    android:layout_toEndOf="@+id/tv_sys_brand"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_sys_company"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sys_brand"
+                    android:layout_marginTop="15dp"
+                    android:text="生产企业"
+                    android:textColor="#B4B4B4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_sys_company"
+                    android:layout_toEndOf="@+id/tv_sys_company"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_sys_approval_number"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sys_company"
+                    android:layout_marginTop="15dp"
+                    android:text="批准文号"
+                    android:textColor="#B4B4B4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_approval_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_sys_approval_number"
+                    android:layout_toEndOf="@+id/tv_sys_approval_number"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_sys_specification"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sys_approval_number"
+                    android:layout_marginTop="15dp"
+                    android:text="包装规格"
+                    android:textColor="#B4B4B4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_specification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_sys_specification"
+                    android:layout_toEndOf="@+id/tv_sys_specification"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_sys_dosage_form"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sys_specification"
+                    android:layout_marginTop="15dp"
+                    android:text="产品剂型"
+                    android:textColor="#B4B4B4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_dosage_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_sys_dosage_form"
+                    android:layout_toEndOf="@+id/tv_sys_dosage_form"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_sys_use_method"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sys_dosage_form"
+                    android:layout_marginTop="15dp"
+                    android:text="用法"
+                    android:textColor="#B4B4B4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_use_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_sys_use_method"
+                    android:layout_toEndOf="@+id/tv_sys_use_method"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_sys_use_dose"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sys_use_method"
+                    android:layout_marginTop="15dp"
+                    android:text="使用剂量"
+                    android:textColor="#B4B4B4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_use_dose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_sys_use_dose"
+                    android:layout_toEndOf="@+id/tv_sys_use_dose"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_sys_expiration_date"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sys_use_dose"
+                    android:layout_marginTop="15dp"
+                    android:text="有效期"
+                    android:textColor="#B4B4B4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_expiration_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_sys_expiration_date"
+                    android:layout_toEndOf="@+id/tv_sys_expiration_date"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_sys_target_user"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sys_expiration_date"
+                    android:layout_marginTop="15dp"
+                    android:text="适用人群"
+                    android:textColor="#B4B4B4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_target_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_sys_target_user"
+                    android:layout_toEndOf="@+id/tv_sys_target_user"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="15dp"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

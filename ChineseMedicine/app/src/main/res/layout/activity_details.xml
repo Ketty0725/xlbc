@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:clipChildren="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_details_back"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_back"
+                    app:tint="#999999"/>
+
+                <ImageView
+                    android:id="@+id/head_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"/>
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/sl_concern"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="3dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#ff2442"
+                    app:hl_strokeWith="1dp">
+
+                    <TextView
+                        android:id="@+id/tv_concern"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关注"
+                        android:textSize="12sp"
+                        android:textColor="#ff2442"/>
+
+                </com.lihang.ShadowLayout>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp">
+
+                    <com.ketty.chinesemedicine.component.view.TouchToScaleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/viewpager2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </com.ketty.chinesemedicine.component.view.TouchToScaleLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/tv_tab_back"
+                        android:paddingStart="7dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="7dp"
+                        android:paddingBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/tv_current"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="/"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/container_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:maxLength="20"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_below="@+id/tv_title"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_content"
+                        android:text=""
+                        android:textColor="#999999"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ip_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_date"
+                        android:layout_toEndOf="@+id/tv_date"
+                        android:layout_marginStart="10dp"
+                        android:text=""
+                        android:textColor="#999999"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_above="@+id/bottombar"
+        android:background="#cccccc"/>
+
+    <RelativeLayout
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:clipChildren="false">
+
+        <RelativeLayout
+            android:id="@+id/rl_love"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:translationX="15dp"
+            android:layout_toStartOf="@+id/rl_collect">
+
+            <ImageView
+                android:id="@+id/normal1"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerInParent="true"/>
+
+            <com.ketty.likeview.LikeView
+                android:id="@+id/iv_love"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:ringColor="#FF2442"
+                app:checkedColor="#FF2442"
+                app:defaultColor="#ffcccccc"
+                app:checkedLikeIconRes="@drawable/ic_love_heart_selected"
+                app:defaultLikeIconRes="@drawable/ic_love_heart_normal"
+                app:cirRadius="14dp"
+                app:cycleTime="2000"/>
+
+            <TextView
+                android:id="@+id/tv_love_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/normal1"
+                android:translationX="5dp"
+                android:text="0"
+                android:textColor="#333333"
+                android:layout_gravity="center"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_collect"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_toStartOf="@+id/ll_comment"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:id="@+id/normal2"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerInParent="true"/>
+
+            <com.ketty.likeview.LikeView
+                android:id="@+id/iv_collect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:ringColor="#FEC73C"
+                app:checkedColor="#FEC73C"
+                app:defaultColor="#ffcccccc"
+                app:checkedLikeIconRes="@drawable/ic_collection_selected"
+                app:defaultLikeIconRes="@drawable/ic_collection_normal"
+                app:cirRadius="14dp"
+                app:cycleTime="2000"/>
+
+            <TextView
+                android:id="@+id/tv_collect_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/normal2"
+                android:translationX="5dp"
+                android:text="0"
+                android:textColor="#333333"
+                android:layout_gravity="center"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_comment"/>
+
+            <TextView
+                android:id="@+id/tv_comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:text="0"
+                android:textColor="#333333"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/red"/>
+
+</RelativeLayout>

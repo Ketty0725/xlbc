@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ketty.api_mapper.ChinesepatentmedicineMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ketty.api_entity.Chinesepatentmedicine">
+        <id column="id" property="id" />
+        <result column="drug_name" property="drugName" />
+        <result column="prescription" property="prescription" />
+        <result column="preparation_method" property="preparationMethod" />
+        <result column="attending" property="attending" />
+        <result column="characters" property="characters" />
+        <result column="usage_and_dosage" property="usageAndDosage" />
+        <result column="notes" property="notes" />
+        <result column="specification" property="specification" />
+        <result column="store_up" property="storeUp" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, drug_name, prescription, preparation_method, attending, characters, usage_and_dosage, notes, specification, store_up
+    </sql>
+
+</mapper>

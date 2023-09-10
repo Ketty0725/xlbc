@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="3dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="57dp">
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="1dp"
+        android:background="@color/gray_d8" />
+
+    <TextView
+        android:id="@+id/tv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_6f"
+        android:textSize="13sp"
+        android:text="展开更多回复"
+        android:layout_marginStart="8dp" />
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/ic_triangle"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        app:tint="@color/color_6f"/>
+
+</LinearLayout>

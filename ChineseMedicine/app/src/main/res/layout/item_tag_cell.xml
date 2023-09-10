@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="7dp">
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/sl_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="8dp"
+        app:hl_cornerRadius="50dp"
+        app:hl_shapeMode="pressed"
+        app:hl_strokeColor="@color/white"
+        app:hl_strokeColor_true="#61babe"
+        app:hl_bindTextView="@+id/tv_tag"
+        app:hl_textColor="#6b6a70"
+        app:hl_textColor_true="#61babe"
+        app:hl_layoutBackground="#eeeeee"
+        app:hl_layoutBackground_true="#e6f0f1">
+
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Hello android"
+            android:textSize="13sp"
+            android:textColor="#6b6a70"/>
+
+    </com.lihang.ShadowLayout>
+
+</LinearLayout>

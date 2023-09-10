@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xlbc.app.mapper.ChineseherbcategoryintroduceMapper">
+
+    <resultMap type="com.xlbc.app.domain.Chineseherbcategoryintroduce" id="ChineseherbcategoryintroduceResult">
+        <result property="id" column="id"/>
+        <result property="categoryId" column="category_id"/>
+        <result property="paraphrase" column="paraphrase"/>
+        <result property="classify" column="classify"/>
+        <result property="efficacy" column="efficacy"/>
+        <result property="matchingFeatures" column="matching_features"/>
+        <result property="medicationAttention" column="medication_attention"/>
+        <result property="modernResearch" column="modern_research"/>
+    </resultMap>
+
+
+</mapper>

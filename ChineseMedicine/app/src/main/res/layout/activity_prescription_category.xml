@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.home.prescription.PrescriptionCategoryActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_back"
+                app:tint="#999999"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="解表剂"
+                android:textColor="#323232"
+                android:textSize="16sp"
+                android:layout_gravity="center"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="该项暂无数据"
+            android:textSize="18sp"
+            android:textColor="#333333"/>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_paraphrase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:hl_cornerRadius="20dp">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#E1E1E1"
+                    app:hl_stroke_dashWidth="5dp"
+                    app:hl_stroke_dashGap="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_tag"
+                                android:layout_marginEnd="5dp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="释义"
+                                android:textSize="16sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_paraphrase"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:textSize="14sp"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_indications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:hl_cornerRadius="20dp">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#E1E1E1"
+                    app:hl_stroke_dashWidth="5dp"
+                    app:hl_stroke_dashGap="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_tag"
+                                android:layout_marginEnd="5dp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="适应症"
+                                android:textSize="16sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_indications"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:textSize="14sp"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:hl_cornerRadius="20dp">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#E1E1E1"
+                    app:hl_stroke_dashWidth="5dp"
+                    app:hl_stroke_dashGap="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_tag"
+                                android:layout_marginEnd="5dp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="注意事项"
+                                android:textSize="16sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_notes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:textSize="14sp"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </com.lihang.ShadowLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/shadow_unfold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        app:hl_shadowColor="@color/app_color_9b"
+        app:hl_shadowLimit="5dp"
+        app:hl_shadowOffsetX="1dp"
+        app:hl_shadowSymmetry="false"
+        app:hl_shadowHiddenRight="true"
+        app:hl_cornerRadius_leftTop="25dp"
+        app:hl_cornerRadius_leftBottom="25dp">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/ic_arrowhead"
+            app:tint="#cccccc"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="1dp"
+            android:ems="2"
+            android:text="目录"
+            android:textSize="12sp"
+            android:textColor="#6b6a6f"
+            android:lineSpacingMultiplier="0.7"/>
+
+    </com.lihang.ShadowLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/red"/>
+
+</RelativeLayout>

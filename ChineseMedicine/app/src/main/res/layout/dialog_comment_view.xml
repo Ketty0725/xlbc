@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lihang.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/design_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="5dp"
+    app:hl_cornerRadius_leftTop="15dp"
+    app:hl_cornerRadius_rightTop="15dp"
+    app:hl_shadowColor="@color/gray_dark"
+    app:hl_shadowOffsetY="-5dp"
+    app:hl_shadowLimit="3dp"
+    app:hl_shadowSymmetry="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:layout_marginHorizontal="12dp">
+
+            <TextView
+                android:id="@+id/tv_comment_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="共0条评论"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_close"
+                app:tint="#858585"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#dcdcdc"
+            android:layout_below="@+id/rl_header"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/view2"
+            android:layout_below="@+id/rl_header"/>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#dcdcdc"
+            android:layout_above="@+id/bottombar"/>
+
+        <LinearLayout
+            android:id="@+id/bottombar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_smile"/>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_editor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                app:hl_layoutBackground="#f5f5f5"
+                app:hl_cornerRadius="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="说点什么吧~"
+                    android:textSize="13sp"
+                    android:textColor="#666666"/>
+
+            </com.lihang.ShadowLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/red"/>
+
+    </RelativeLayout>
+
+</com.lihang.ShadowLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ketty.chinesemedicine">
+
+    <uses-sdk
+        tools:ignore="ManifestOrder"
+        tools:overrideLibrary="androidx.camera.view,androidx.camera:camera-camera2,androidx.camera.camera2,androidx.camera.lifecycle,androidx.camera.core" />
+    <!-- 允许应用程序改变网络状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 允许应用程序改变WIFI连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 允许应用程序访问有关的网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许应用程序访问WIFI网卡的网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许应用程序完全使用网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 获取设备信息 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.REAL_GET_TASKS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_MEDIA_STORAGE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 适配Android R包可见性 开始 -->
+    <queries package="${applicationId}">
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE" />
+        </intent>
+    </queries> <!-- 用户手机设置中允许未知来源安装包安装状态为关； -->
+    <!-- Android8.0 以后，如果要安装 apk 需要额外添加权限： -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:name"
+        tools:targetApi="32">
+        <!-- 全面屏 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="5a7c92f8e489273c62fc949f8b372132"/>
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login.LoginStartActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".login.phone.LoginForPhoneActivity" />
+        <activity android:name=".main.home.ListCategoryActivity" />
+        <activity android:name=".main.search.SearchHistoryActivity" />
+        <activity android:name=".main.search.SearchResultActivity" />
+        <activity android:name=".main.home.chineseherb.ChineseHerbActivity" />
+        <activity android:name=".main.home.chineseherb.ChineseHerbCategoryActivity" />
+        <activity android:name=".main.home.chineseherb.ChineseHerbFlowCategoryActivity" />
+        <activity android:name=".main.home.prescription.PrescriptionActivity" />
+        <activity android:name=".main.home.prescription.PrescriptionCategoryActivity" />
+        <activity android:name=".main.home.prescription.PrescriptionFlowCategoryActivity" />
+        <activity android:name=".main.home.ChinesePatentMedicineActivity" />
+        <activity android:name=".main.home.MedicatedDietActivity" />
+        <activity android:name=".main.home.typhoidtheory.TyphoidTheoryCategoryActivity" />
+        <activity android:name=".main.home.typhoidtheory.TyphoidTheoryPrescriptionActivity" />
+        <activity android:name=".main.home.typhoidtheory.TyphoidTheoryChineseHerbActivity" />
+        <activity android:name=".main.home.EighteenAntiActivity" />
+        <activity android:name=".main.community.details.DetailsActivity" />
+        <activity android:name=".main.store.ProductDetailsActivity" />
+        <activity android:name=".main.store.DoctorQAActivity" />
+        <activity android:name=".main.store.ShoppingCartActivity" />
+        <activity android:name=".main.store.ProductSettlementActivity" />
+        <activity android:name=".main.store.orderform.OrderFormActivity" />
+        <activity android:name=".main.store.orderform.OrderDetailsActivity" />
+        <activity android:name=".main.store.ShippingAddressActivity" />
+        <activity android:name=".main.store.AddNewAddressActivity" />
+        <activity android:name=".main.mine.UserInfoActivity" />
+        <activity android:name=".main.mine.BrowsingHistoryActivity" />
+        <activity android:name=".main.mine.RecycleBinActivity" />
+        <activity android:name=".main.mine.UserHomeActivity" />
+        <activity android:name=".main.mine.concern.ConcernListActivity" />
+        <activity android:name=".main.publish.PublishActivity" />
+        <activity
+            android:name=".main.publish.PubActivity"
+            android:theme="@style/PubTheme" />
+        <activity android:name=".main.mine.setting.SettingActivity" />
+        <activity android:name=".main.mine.setting.AccountActivity" />
+        <activity android:name=".main.mine.setting.BindingPhoneActivity" />
+        <activity android:name=".main.mine.setting.AuthenticationActivity" />
+        <activity android:name=".main.mine.setting.VerifyPhoneActivity" />
+        <activity android:name=".main.mine.setting.SetNewPasswordActivity" />
+        <activity android:name=".main.mine.setting.GeneralActivity" />
+        <activity android:name=".main.mine.setting.AboutActivity" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            tools:ignore="LockedOrientationActivity">
+
+            <!-- QQ和QQ空间分享 QQ登录的回调必须要配置的 -->
+            <intent-filter>
+                <data android:scheme="tencent102035382" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".provider.cover.CoverProvider"
+            android:authorities="com.ketty.chinesemedicine.provider.cover"
+            android:enabled="true"
+            android:exported="true" />
+        <provider
+            android:name=".provider.person.PersonProvider"
+            android:authorities="com.ketty.chinesemedicine.provider.person"
+            android:enabled="true"
+            android:exported="true" />
+        <provider
+            android:name="cn.sharesdk.framework.utils.ShareSDKFileProvider"
+            android:authorities="${applicationId}.cn.sharesdk.ShareSDKFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
+        <receiver
+            android:name=".util.NetBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

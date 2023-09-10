@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".main.search.SearchToDataFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#dcdcdc"/>
+
+    <com.ketty.chinesemedicine.main.search.SearchTabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:tabIndicatorHeight="0dp"
+        app:tabMaxWidth="200dp"
+        app:tabMinWidth="20dp"
+        app:tabPaddingStart="0dp"
+        app:tabPaddingEnd="0dp"
+        app:tabMode="auto"
+        app:tabRippleColor="@android:color/transparent" />
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

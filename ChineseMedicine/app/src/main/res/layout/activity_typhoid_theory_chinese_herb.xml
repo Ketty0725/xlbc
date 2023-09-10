@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.home.typhoidtheory.TyphoidTheoryChineseHerbActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_back"
+                app:tint="#999999"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#323232"
+                android:textSize="16sp"
+                android:layout_gravity="center"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:hl_cornerRadius="20dp">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#E1E1E1"
+                    app:hl_stroke_dashWidth="5dp"
+                    app:hl_stroke_dashGap="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="原文摘要:"
+                                android:textSize="14sp"
+                                android:textColor="#5ebdbf"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_original_abstract"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="#dcdcdc"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_contain"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="#5ebdbf"/>
+
+                            <TextView
+                                android:id="@+id/tv_typhoid_theory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text=""
+                                android:textSize="14sp"
+                                android:textColor="#333333"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_typhoid_theory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                            <View
+                                android:id="@+id/line_typhoid_theory"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#dcdcdc"/>
+
+                            <TextView
+                                android:id="@+id/tv_golden_chamber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textSize="14sp"
+                                android:textColor="#333333"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_golden_chamber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </com.lihang.ShadowLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="该项暂无数据"
+            android:textSize="18sp"
+            android:textColor="#333333"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/red"/>
+
+</RelativeLayout>

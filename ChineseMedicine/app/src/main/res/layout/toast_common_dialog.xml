@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_msg"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:hint="请输入信息"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/dialog_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_result"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/dialog_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/dialog_group"
+                android:layout_marginTop="15dp"
+                android:background="@color/alertdialog_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dialog_line"
+                android:orientation="horizontal">
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/sl_neg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    app:hl_layoutBackground="#fff"
+                    app:hl_layoutBackground_true="#EFEFEF"
+                    app:hl_shapeMode="ripple">
+
+                    <TextView
+                        android:id="@+id/tv_neg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#858585"
+                        android:textSize="16sp" />
+
+                </com.lihang.ShadowLayout>
+
+                <ImageView
+                    android:id="@+id/img_line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="43dp"
+                    android:background="@color/alertdialog_line" />
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/sl_pos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    app:hl_layoutBackground="#fff"
+                    app:hl_layoutBackground_true="#EFEFEF"
+                    app:hl_shapeMode="ripple">
+
+                    <TextView
+                        android:id="@+id/tv_pos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ff2444"
+                        android:textSize="16sp" />
+
+                </com.lihang.ShadowLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.lihang.ShadowLayout>
+
+</LinearLayout>

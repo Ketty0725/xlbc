@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".main.mine.setting.AboutActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/defaultColor">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_back"
+                app:tint="#999999"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关于杏林本草"
+                android:textColor="#323232"
+                android:textSize="15sp"
+                android:layout_gravity="center"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/appbar"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo_vertical"/>
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/iv_logo"
+        android:textSize="14sp"
+        android:textColor="#999999"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_version"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="30dp"
+        android:orientation="vertical">
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_check_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hl_cornerRadius_leftTop="15dp"
+            app:hl_cornerRadius_rightTop="15dp"
+            app:hl_layoutBackground="#fff"
+            app:hl_layoutBackground_true="#E3E3E3"
+            app:hl_shapeMode="ripple">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="检查更新"
+                    android:textSize="15sp"
+                    android:textColor="#333333"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_back"
+                    android:scaleX="-1"
+                    app:tint="#cccccc" />
+
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="#e6e6e6"/>
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_user_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hl_cornerRadius_leftTop="15dp"
+            app:hl_cornerRadius_rightTop="15dp"
+            app:hl_layoutBackground="#fff"
+            app:hl_layoutBackground_true="#E3E3E3"
+            app:hl_shapeMode="ripple">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="用户协议"
+                    android:textSize="15sp"
+                    android:textColor="#333333"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_back"
+                    android:scaleX="-1"
+                    app:tint="#cccccc" />
+
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="#e6e6e6"/>
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hl_cornerRadius_leftBottom="15dp"
+            app:hl_cornerRadius_rightBottom="15dp"
+            app:hl_layoutBackground="#fff"
+            app:hl_layoutBackground_true="#E3E3E3"
+            app:hl_shapeMode="ripple">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="隐私政策"
+                    android:textSize="15sp"
+                    android:textColor="#333333"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_back"
+                    android:scaleX="-1"
+                    app:tint="#cccccc" />
+
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

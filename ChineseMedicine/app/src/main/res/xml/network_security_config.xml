@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <base includeSubdomains="true">www.pgyer.com</base>
+        <base includeSubdomains="true">app-global.pgyer.com</base>
+    </base-config>
+</network-security-config>

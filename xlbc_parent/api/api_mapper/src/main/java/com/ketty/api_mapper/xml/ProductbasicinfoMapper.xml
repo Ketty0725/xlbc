@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ketty.api_mapper.ProductbasicinfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ketty.api_entity.Productbasicinfo">
+        <id column="id" property="id" />
+        <result column="product_id" property="productId" />
+        <result column="common_name" property="commonName" />
+        <result column="brand" property="brand" />
+        <result column="company" property="company" />
+        <result column="approval_number" property="approvalNumber" />
+        <result column="specification" property="specification" />
+        <result column="dosage_form" property="dosageForm" />
+        <result column="use_method" property="useMethod" />
+        <result column="use_dose" property="useDose" />
+        <result column="expiration_date" property="expirationDate" />
+        <result column="target_user" property="targetUser" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, product_id, common_name, brand, company, approval_number, specification, dosage_form, use_method, use_dose, expiration_date, target_user
+    </sql>
+
+</mapper>

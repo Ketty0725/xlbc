@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/shadow_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        app:clickable="false"
+        app:hl_cornerRadius="50dp"
+        android:padding="1dp">
+
+        <ImageView
+            android:id="@+id/tab_layout_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"/>
+
+    </com.lihang.ShadowLayout>
+
+    <TextView
+        android:id="@+id/tab_layout_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingBottom="1dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text=""
+        android:textColor="#666666"
+        android:textSize="12sp"/>
+
+</LinearLayout>

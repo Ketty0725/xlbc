@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xlbc.app.mapper.UserMapper">
+
+    <resultMap type="com.xlbc.app.domain.User" id="UserResult">
+        <result property="uId" column="u_id"/>
+        <result property="uPhone" column="u_phone"/>
+        <result property="uName" column="u_name"/>
+        <result property="uSex" column="u_sex"/>
+        <result property="uPassword" column="u_password"/>
+        <result property="uHeadicon" column="u_headicon"/>
+        <result property="uBirthday" column="u_birthday"/>
+        <result property="uAddress" column="u_address"/>
+        <result property="uAbout" column="u_about"/>
+        <result property="uQqId" column="u_qq_id"/>
+        <result property="uQqName" column="u_qq_name"/>
+        <result property="backgroundImage" column="background_image"/>
+        <result property="ipAddress" column="ip_address"/>
+    </resultMap>
+
+
+</mapper>

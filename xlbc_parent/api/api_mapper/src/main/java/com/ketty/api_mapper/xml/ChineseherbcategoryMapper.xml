@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ketty.api_mapper.ChineseherbcategoryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ketty.api_entity.Chineseherbcategory">
+        <id column="category_id" property="categoryId" />
+        <result column="parent_id" property="parentId" />
+        <result column="ancestors" property="ancestors" />
+        <result column="category_name" property="categoryName" />
+        <result column="order_num" property="orderNum" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        category_id, parent_id, ancestors, category_name, order_num, create_by, create_time, update_by, update_time
+    </sql>
+
+</mapper>

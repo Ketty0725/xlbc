@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        app:clickable="false"
+        app:hl_layoutBackground="@color/white"
+        app:hl_cornerRadius="15dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:textSize="14sp"
+                android:textColor="#ff2442"/>
+
+            <ImageView
+                android:id="@+id/iv_thumbnail"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_below="@+id/tv_state"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/iv_thumbnail"
+                android:layout_toStartOf="@+id/tv_price"
+                android:layout_below="@+id/tv_state"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBaseline="@+id/tv_name"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_below="@+id/tv_price"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:textColor="#999999"/>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_thumbnail"
+                android:layout_alignParentEnd="true"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                app:hl_layoutBackground="#ffffff"
+                app:hl_cornerRadius="50dp"
+                app:hl_strokeColor="#CDCDCD">
+
+                <TextView
+                    android:id="@+id/tv_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+            </com.lihang.ShadowLayout>
+
+        </RelativeLayout>
+
+    </com.lihang.ShadowLayout>
+
+</LinearLayout>

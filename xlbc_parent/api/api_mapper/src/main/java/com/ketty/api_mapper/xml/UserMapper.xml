@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ketty.api_mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ketty.api_entity.User">
+        <id column="u_id" property="uId" />
+        <result column="u_phone" property="uPhone" />
+        <result column="u_name" property="uName" />
+        <result column="u_sex" property="uSex" />
+        <result column="u_password" property="uPassword" />
+        <result column="u_headicon" property="uHeadicon" />
+        <result column="u_birthday" property="uBirthday" />
+        <result column="u_address" property="uAddress" />
+        <result column="u_about" property="uAbout" />
+        <result column="u_qq_id" property="uQqId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        u_id, u_phone, u_name, u_sex, u_password, u_headicon, u_birthday, u_address, u_about, u_qq_id
+    </sql>
+
+    <!--<update id="updateUserInfo" parameterType="User">
+        update user
+        set u_name = #{uName}, u_sex = #{uSex}, u_headicon = #{uHeadicon},
+        u_birthday = #{uBirthday}, u_address = #{uAddress}, u_about = #{uAbout}
+        where u_id = #{uId}
+    </update>-->
+
+</mapper>

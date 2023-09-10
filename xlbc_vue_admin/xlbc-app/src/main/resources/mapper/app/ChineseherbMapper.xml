@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xlbc.app.mapper.ChineseherbMapper">
+
+    <resultMap type="com.xlbc.app.domain.Chineseherb" id="ChineseherbResult">
+        <result property="id" column="id"/>
+        <result property="levelId" column="level_id"/>
+        <result property="medicinalName" column="medicinal_name"/>
+        <result property="pinYin" column="pin_yin"/>
+        <result property="startedWith" column="started_with"/>
+        <result property="category" column="category"/>
+        <result property="aliases" column="aliases"/>
+        <result property="sexualTaste" column="sexual_taste"/>
+        <result property="efficacy" column="efficacy"/>
+        <result property="attending" column="attending"/>
+        <result property="briefIntroduction" column="brief_introduction"/>
+        <result property="usageAndDosage" column="usage_and_dosage"/>
+        <result property="notes" column="notes"/>
+        <result property="songTips" column="song_tips"/>
+        <result property="clinicalApplication" column="clinical_application"/>
+        <result property="relatedMatching" column="related_matching"/>
+        <result property="modernConcocted" column="modern_concocted"/>
+        <result property="ancientConcocted" column="ancient_concocted"/>
+        <result property="characters" column="characters"/>
+        <result property="differential" column="differential"/>
+        <result property="treatise" column="treatise"/>
+        <result property="summary" column="summary"/>
+        <result property="distributionArea" column="distribution_area"/>
+        <result property="daoRealEstateDistrict" column="dao_real_estate_district"/>
+        <result property="growingEnvironment" column="growing_environment"/>
+        <result property="chemicalComposition" column="chemical_composition"/>
+        <result property="pharmacologicalAction" column="pharmacological_action"/>
+    </resultMap>
+
+
+</mapper>

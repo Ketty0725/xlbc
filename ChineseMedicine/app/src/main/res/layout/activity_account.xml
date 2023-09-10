@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".main.mine.setting.AccountActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/defaultColor">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back"
+                app:tint="#999999"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账号与安全"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:layout_gravity="center"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/appbar"
+        android:orientation="vertical">
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/shadow_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hl_cornerRadius_leftTop="15dp"
+            app:hl_cornerRadius_rightTop="15dp"
+            app:hl_layoutBackground="#fff"
+            app:hl_layoutBackground_true="#E3E3E3"
+            app:hl_shapeMode="ripple">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="手机号"
+                    android:textSize="15sp"
+                    android:textColor="#333333"/>
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:text="未绑定"
+                    android:textSize="15sp"
+                    android:textColor="#999999"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_back"
+                    android:scaleX="-1"
+                    app:tint="#cccccc" />
+
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="#e6e6e6"/>
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/shadow_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hl_cornerRadius_leftBottom="15dp"
+            app:hl_cornerRadius_rightBottom="15dp"
+            app:hl_layoutBackground="#fff"
+            app:hl_layoutBackground_true="#E3E3E3"
+            app:hl_shapeMode="ripple">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="登录密码"
+                    android:textSize="15sp"
+                    android:textColor="#333333"/>
+
+                <TextView
+                    android:id="@+id/tv_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:text="未设置"
+                    android:textSize="15sp"
+                    android:textColor="#999999"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_back"
+                    android:scaleX="-1"
+                    app:tint="#cccccc" />
+
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/shadow_account_qq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            app:hl_cornerRadius="15dp"
+            app:hl_layoutBackground="#fff"
+            app:hl_layoutBackground_true="#E3E3E3"
+            app:hl_shapeMode="ripple">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="QQ账号"
+                    android:textSize="15sp"
+                    android:textColor="#333333"/>
+
+                <TextView
+                    android:id="@+id/tv_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:text="未绑定"
+                    android:textSize="15sp"
+                    android:textColor="#999999"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_back"
+                    android:scaleX="-1"
+                    app:tint="#cccccc" />
+
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/shadow_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            app:hl_cornerRadius="15dp"
+            app:hl_layoutBackground="#fff"
+            app:hl_layoutBackground_true="#E3E3E3"
+            app:hl_shapeMode="ripple">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="注销账号"
+                    android:textSize="15sp"
+                    android:textColor="#333333"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_back"
+                    android:scaleX="-1"
+                    app:tint="#cccccc" />
+
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

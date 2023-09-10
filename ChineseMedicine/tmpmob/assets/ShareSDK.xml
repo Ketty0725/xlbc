@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+<Wechat />
+<WechatMoments />
+<QQ SortId="1" AppId="" AppKey="" ShareByAppClient="true" Enable="true" BypassApproval="false" />
+<QZone SortId="2" AppId="" AppKey="" ShareByAppClient="true" Enable="true" BypassApproval="false" />
+<SinaWeibo RedirectUrl="null" />
+</DevInfor>

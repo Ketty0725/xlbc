@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.home.EighteenAntiActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_back"
+                app:tint="#999999"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="十八反十九畏"
+                android:textColor="#323232"
+                android:textSize="16sp"
+                android:layout_gravity="center"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:hl_cornerRadius="20dp">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#E1E1E1"
+                    app:hl_stroke_dashWidth="5dp"
+                    app:hl_stroke_dashGap="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="一、十八反歌诀:"
+                                android:textSize="16sp"
+                                android:textColor="#5ebdbf"
+                                android:textStyle="bold"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="@mipmap/frame_background"
+                                android:layout_marginTop="12dp">
+
+                                <TextView
+                                    android:id="@+id/tv_eighteen_anti_song_tips"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:lineSpacingMultiplier="1.5"
+                                    android:text="本草明言十八反，半蒌贝蔹及攻乌，\n藻戟遂芫俱战草，诸参辛芍叛藜芦。"
+                                    android:textColor="#886a46"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_eighteen_anti_detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:lineSpacingMultiplier="1.2"
+                                android:text="十八反包括32种中药的相反。如果相反药物合用，会增强或产生毒副作用，原则上应禁用。即：半夏、瓜萎（包括瓜萎皮、萎仁、天花粉）、贝母（包括浙贝母、川贝母）、白蔹、白及反乌头（包括川乌、草乌、附子、天雄、侧子）；海藻、大戟、甘遂、芫花反甘草；人参、党参、太子参、丹参、玄参、沙参、苦参、细辛、白芍、赤芍反藜芦。"
+                                android:textSize="14sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="#dcdcdc"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="二、十九畏歌诀:"
+                                android:textSize="16sp"
+                                android:textColor="#5ebdbf"
+                                android:textStyle="bold"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="320dp"
+                                android:layout_marginTop="12dp"
+                                android:background="@mipmap/frame_background">
+
+                                <TextView
+                                    android:id="@+id/tv_nineteen_fears_song_tips"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:lineSpacingMultiplier="1.5"
+                                    android:text="硫黄原是火中精，朴硝一见便相争。\n水银莫与砒霜见，狼毒最怕密陀僧。\n巴豆性烈最为上，偏与牵牛不顺情。\n丁香莫与郁金见，牙硝难合京三棱。\n川乌草乌不顺犀，人参最怕五灵脂。\n官桂善能调冷气，若逢石脂便相欺。\n大凡修合看顺逆，炮爁炙煿莫相依。"
+                                    android:textColor="#886a46"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_nineteen_fears_detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:lineSpacingMultiplier="1.2"
+                                android:text="畏即相畏，指一种药物的功效或毒性、副作用被另一种药物抑制或消除。即：硫黄畏朴硝、芒硝、玄明粉；水银畏砒霜、信石、红砒、白砒；狼毒畏密陀僧；巴豆、巴豆霜畏牵牛子（黑丑、白丑）；公丁香、母丁香畏郁金（黑郁金、黄郁金）：牙硝、玄明粉畏三棱；川乌、草乌、附子、天雄畏犀牛角、广角；人参畏五灵脂；肉桂、官桂、桂枝畏赤石脂。这些药物在配伍使用时应慎重。\n\n中医药物配伍分为：相须、相使、相畏、相惡、相杀、相反。所以说十八反是指两种药物相反。"
+                                android:textSize="14sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="#dcdcdc"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="三、用药禁忌:"
+                                android:textSize="16sp"
+                                android:textColor="#5ebdbf"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:text="1、配伍禁忌"
+                                android:textColor="#333333"
+                                android:textStyle="bold"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_compatibility_contraindicated"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:lineSpacingMultiplier="1.2"
+                                android:text="《神农本草经•序例》指出“勿用相恶、相反者”，“若有毒宜制，可用相畏、相杀者尔，勿合用也”。自宋代以后将“相畏”关系也列为配伍禁忌，与“相恶”混淆不清。\n因此“十九畏”的概念，与“配伍”一节中所谈的七情中的“相畏”，涵义并不相同。“十九畏”和“十八反”诸药，有一部分同实际应用有些出历代医家也有所论及，引古方为据，证明某些药物仍然可以合用。如感应丸中的巴豆与牵牛同用；甘遂半夏汤以甘草同甘遂并列；散肿溃坚汤、海藻玉壶汤等均合用甘草草和海藻；十香返魂丹是将丁香、郁金同用；大活络丹乌头与犀角同用等等。现代这方面的研究工作做得不多，有些实验研究初步表明，如甘草、甘遂两种药合用时，毒性的大小主要取决于甘草的用量比例，甘草的剂量若相等或大于甘遂，毒性较大；又如贝母和半夏分别与乌头配伍，未见明显的增强毒性。币细辛配伍藜芦，则可导致实验动物中毒死亡。由于对“十九畏”和“十八反”的研究，还有待进一步作较深入的实验和观察，并研究其机理，因此，目前应采取慎重态度。一般说来，对于其中一些药物，若无充分根据和应用经验，仍须避免盲目配合应用。"
+                                android:textSize="14sp"
+                                android:textColor="#333333"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:text="2、孕妇服药禁忌"
+                                android:textColor="#333333"
+                                android:textStyle="bold"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_pregnant_women_contraindicated"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:lineSpacingMultiplier="1.2"
+                                android:text="某些药物具有损害胎元以致堕胎的副作用，所以应该作为妊娠禁忌的药物。根据药物对于胎元损害程度的不同，一般可分为禁用与慎用二类。禁用的大多是毒性较强，或药性猛烈的药物，如巴豆、牵牛、大戟、斑蝥、商陆、麝香、三棱、莪术、水蛭、虻虫等；慎用的包括通经去瘀行气破滞，以及辛热等药物，如桃仁、红花、大黄、枳实、附子、干姜、肉桂等。凡禁用的药物，绝对不能使用；慎用的药物，则可根据孕妇患病的情况，斟情使用。但没有特殊必要时，应尽量避免，以防发生事故。"
+                                android:textSize="14sp"
+                                android:textColor="#333333"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:text="3、饮食禁忌"
+                                android:textColor="#333333"
+                                android:textStyle="bold"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_dietary_contraindications"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:lineSpacingMultiplier="1.2"
+                                android:text="饮食禁忌简称食忌，也就是通常所说的忌口。在古代文献上有常山忌葱；地黄、何首乌忌葱、蒜、萝卜，薄荷忌鳖肉；茯苓忌醋；鳖甲忌苋菜：以及蜜忌葱等记载。这说明服用某些药时不可同吃某些食物。另外，由于疾病的关系，在服药期间，凡属生冷、粘腻、腥臭等不易消化及有特殊刺激性的食物，都应根据需要予以避免。高烧患者还应忌油。"
+                                android:textSize="14sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </com.lihang.ShadowLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

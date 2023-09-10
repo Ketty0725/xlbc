@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".login.phone.LoginForPhoneActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_back"
+                app:tint="#999999"/>
+
+            <TextView
+                android:id="@+id/mode_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="30dp"
+                android:text="手机密码登录"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:layout_above="@+id/rl_bottom"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="13dp"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:background="#e6e6e6"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="社交账号登录"
+                android:textColor="#cdcdcd"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="13dp"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="#cdcdcd"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="72dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ll_title"
+            android:orientation="horizontal">
+
+            <!--<com.lihang.ShadowLayout
+                android:id="@+id/ic_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:layout_marginEnd="14dp"
+                app:hl_cornerRadius="50dp"
+                app:hl_strokeWith="0.3dp"
+                app:hl_strokeColor="#dcdcdc">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_wechat_white"
+                    app:tint="#28C445"/>
+
+            </com.lihang.ShadowLayout>-->
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/ic_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="9dp"
+                app:hl_cornerRadius="50dp"
+                app:hl_strokeWith="0.3dp"
+                app:hl_strokeColor="#dcdcdc">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_qq_color"/>
+
+            </com.lihang.ShadowLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

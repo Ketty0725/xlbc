@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".main.store.AddNewAddressActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_back"
+                app:tint="#999999"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="创建新地址"
+                android:textColor="#323232"
+                android:textSize="16sp"
+                android:layout_gravity="center"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/defaultColor"
+        android:layout_below="@+id/appbar"
+        android:layout_above="@+id/sl_add_new_address">
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            app:hl_cornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="收货人"
+                    android:textSize="14sp"
+                    android:textColor="#333333"/>
+
+                <com.ketty.chinesemedicine.component.XEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tv_name"
+                    android:layout_alignBaseline="@+id/tv_name"
+                    android:hint="姓名"
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:textColorHint="#cccccc"
+                    android:background="@null"/>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#dcdcdc"
+                    android:layout_below="@+id/tv_name"/>
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/view"
+                    android:text="联系电话"
+                    android:textSize="14sp"
+                    android:textColor="#333333"/>
+
+                <com.ketty.chinesemedicine.component.XEditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tv_phone"
+                    android:layout_alignBaseline="@+id/tv_phone"
+                    android:inputType="phone"
+                    android:hint="手机号码"
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:textColorHint="#cccccc"
+                    android:background="@null"
+                    app:x_pattern="3,4,4"
+                    app:x_separator=" "/>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#dcdcdc"
+                    android:layout_below="@+id/tv_phone"/>
+
+                <TextView
+                    android:id="@+id/tv_area"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/view2"
+                    android:text="所在地区"
+                    android:textSize="14sp"
+                    android:textColor="#333333"/>
+
+                <com.ketty.chinesemedicine.component.XEditText
+                    android:id="@+id/et_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tv_area"
+                    android:layout_alignBaseline="@+id/tv_area"
+                    android:hint="省、市、区"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:textColorHint="#cccccc"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:textIsSelectable="false"
+                    app:x_disableClear="true"/>
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/tv_area"
+                    android:text="详细地址"
+                    android:textSize="14sp"
+                    android:textColor="#333333"/>
+
+                <com.ketty.chinesemedicine.component.XEditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tv_address"
+                    android:layout_alignBaseline="@+id/tv_address"
+                    android:hint="小区、门牌号等"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:textColorHint="#cccccc"
+                    android:background="@null"/>
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="45dp"
+                    android:background="#dcdcdc"
+                    android:layout_below="@+id/tv_address"/>
+
+                <TextView
+                    android:id="@+id/tv_default_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/view3"
+                    android:text="设置为默认地址"
+                    android:textSize="14sp"
+                    android:textColor="#333333"/>
+
+                <com.ketty.chinesemedicine.component.SwitchButton
+                    android:id="@+id/switch_button"
+                    android:layout_width="45dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/view3"
+                    app:sb_checked_color="#ff2442"
+                    app:sb_show_indicator="false"/>
+
+            </RelativeLayout>
+
+        </com.lihang.ShadowLayout>
+
+    </LinearLayout>
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/sl_add_new_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:hl_cornerRadius="50dp"
+        app:hl_layoutBackground="#ffa5a5">
+
+        <TextView
+            android:id="@+id/tv_add_new_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="添加新地址"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </com.lihang.ShadowLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xlbc.app.mapper.ProductMapper">
+
+    <resultMap type="com.xlbc.app.domain.Product" id="ProductResult">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="price" column="price"/>
+        <result property="info" column="info"/>
+        <result property="image" column="image"/>
+        <result property="inventory" column="inventory"/>
+        <result property="categoryId" column="category_id"/>
+        <result property="collectCount" column="collect_count"/>
+    </resultMap>
+
+
+</mapper>

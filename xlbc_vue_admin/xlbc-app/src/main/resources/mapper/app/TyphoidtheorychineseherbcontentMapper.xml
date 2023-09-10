@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xlbc.app.mapper.TyphoidtheorychineseherbcontentMapper">
+
+    <resultMap type="com.xlbc.app.domain.Typhoidtheorychineseherbcontent" id="TyphoidtheorychineseherbcontentResult">
+        <result property="id" column="id"/>
+        <result property="cbId" column="cb_id"/>
+        <result property="typeId" column="type_id"/>
+        <result property="content" column="content"/>
+    </resultMap>
+
+
+</mapper>

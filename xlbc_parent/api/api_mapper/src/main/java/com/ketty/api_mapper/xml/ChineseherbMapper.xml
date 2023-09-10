@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ketty.api_mapper.ChineseherbMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ketty.api_entity.Chineseherb">
+        <id column="id" property="id" />
+        <result column="second_level_id" property="secondLevelId" />
+        <result column="medicinal_name" property="medicinalName" />
+        <result column="pin_yin" property="pinYin" />
+        <result column="started_with" property="startedWith" />
+        <result column="category" property="category" />
+        <result column="aliases" property="aliases" />
+        <result column="sexual_taste" property="sexualTaste" />
+        <result column="efficacy" property="efficacy" />
+        <result column="attending" property="attending" />
+        <result column="brief_introduction" property="briefIntroduction" />
+        <result column="usage_and_dosage" property="usageAndDosage" />
+        <result column="notes" property="notes" />
+        <result column="song_tips" property="songTips" />
+        <result column="clinical_application" property="clinicalApplication" />
+        <result column="related_matching" property="relatedMatching" />
+        <result column="modern_concocted" property="modernConcocted" />
+        <result column="ancient_concocted" property="ancientConcocted" />
+        <result column="characters" property="characters" />
+        <result column="differential" property="differential" />
+        <result column="treatise" property="treatise" />
+        <result column="summary" property="summary" />
+        <result column="distribution_area" property="distributionArea" />
+        <result column="dao_real_estate_district" property="daoRealEstateDistrict" />
+        <result column="growing_environment" property="growingEnvironment" />
+        <result column="chemical_composition" property="chemicalComposition" />
+        <result column="pharmacological_action" property="pharmacologicalAction" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, second_level_id, medicinal_name, pin_yin, started_with, category, aliases, sexual_taste, efficacy, attending, brief_introduction, usage_and_dosage, notes, song_tips, clinical_application, related_matching, modern_concocted, ancient_concocted, characters, differential, treatise, summary, distribution_area, dao_real_estate_district, growing_environment, chemical_composition, pharmacological_action
+    </sql>
+
+</mapper>

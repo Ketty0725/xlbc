@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".main.mine.UserInfoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back"
+                app:tint="#999999"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="个人信息"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/shadow_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                app:hl_cornerRadius="20dp"
+                app:hl_layoutBackground="#ff2442">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="3dp"
+                    android:text="保存"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"/>
+
+            </com.lihang.ShadowLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_head"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_useravator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <com.ketty.chinesemedicine.component.SampleCircleImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:radius="50dp"
+                    android:layout_alignBottom="@+id/iv_useravator"
+                    android:layout_alignEnd="@+id/iv_useravator"
+                    app:src="@drawable/camera_icon" />
+
+            </RelativeLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/shadow_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hl_layoutBackground="#fff"
+                app:hl_layoutBackground_true="#EFEFEF"
+                app:hl_shapeMode="ripple">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="昵称"
+                        android:textSize="14sp"
+                        android:textColor="#666666"/>
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:textSize="14sp"
+                        android:maxLength="15"
+                        android:gravity="end"
+                        android:paddingEnd="10dp"
+                        android:textColor="#333333"/>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_back"
+                        android:scaleX="-1"
+                        app:tint="#cccccc" />
+
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="#EAEAEA"/>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/shadow_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hl_layoutBackground="#fff"
+                app:hl_layoutBackground_true="#EFEFEF"
+                app:hl_shapeMode="ripple">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="性别"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#666666"/>
+
+                    <TextView
+                        android:id="@+id/tv_sex"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:gravity="end"
+                        android:paddingEnd="10dp"
+                        android:hint="请选择"
+                        android:textColor="#333333"/>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_back"
+                        android:scaleX="-1"
+                        app:tint="#cccccc" />
+
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="#EAEAEA"/>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/shadow_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hl_layoutBackground="#fff"
+                app:hl_layoutBackground_true="#EFEFEF"
+                app:hl_shapeMode="ripple">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="生日"
+                        android:textSize="14sp"
+                        android:textColor="#666666"/>
+
+                    <TextView
+                        android:id="@+id/tv_birthday"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:gravity="end"
+                        android:paddingEnd="10dp"
+                        android:hint="请选择"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_back"
+                        android:scaleX="-1"
+                        app:tint="#cccccc" />
+
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="#EAEAEA"/>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/shadow_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hl_layoutBackground="#fff"
+                app:hl_layoutBackground_true="#EFEFEF"
+                app:hl_shapeMode="ripple">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="家乡"
+                        android:textSize="14sp"
+                        android:textColor="#666666"/>
+
+                    <TextView
+                        android:id="@+id/tv_area"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:gravity="end"
+                        android:paddingEnd="10dp"
+                        android:hint="请选择"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#333333"/>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_back"
+                        android:scaleX="-1"
+                        app:tint="#cccccc" />
+
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="#EAEAEA"/>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/shadow_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hl_layoutBackground="#fff"
+                app:hl_layoutBackground_true="#EFEFEF"
+                app:hl_shapeMode="ripple">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="简介"
+                        android:textSize="14sp"
+                        android:textColor="#666666"/>
+
+                    <TextView
+                        android:id="@+id/tv_about"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:gravity="end"
+                        android:paddingEnd="10dp"
+                        android:hint="有趣的简介会吸引更多关注哦~"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:maxLength="100"
+                        android:textColor="#333333"/>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_back"
+                        android:scaleX="-1"
+                        app:tint="#cccccc" />
+
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="#EAEAEA"/>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/shadow_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hl_layoutBackground="#fff"
+                app:hl_layoutBackground_true="#EFEFEF"
+                app:hl_shapeMode="ripple">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:text="背景图"
+                        android:textSize="14sp"
+                        android:textColor="#666666"/>
+
+                    <ImageView
+                        android:id="@+id/iv_background"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@mipmap/mine_bg"/>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_back"
+                        android:scaleX="-1"
+                        app:tint="#cccccc" />
+
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

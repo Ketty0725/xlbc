@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".main.search.SearchHistoryActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="7dp"
+        android:orientation="horizontal">
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:hl_cornerRadius="50dp"
+            app:hl_layoutBackground="#f5f5f5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="5dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/ic_search"
+                    app:tint="#999999" />
+
+                <com.ketty.chinesemedicine.component.XEditText
+                    android:id="@+id/et_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:layout_marginHorizontal="5dp"
+                    android:hint="请输入关键词"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:textColorHint="#999999"
+                    android:background="@null"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:maxLength="100"/>
+
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:text="取消"
+            android:textSize="14sp"
+            android:textColor="#999999"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/ll_search"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="历史记录"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_dustbin"
+                app:tint="#999999"/>
+
+        </LinearLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexbox_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:flexWrap="wrap"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_search"
+        android:visibility="gone"/>
+
+</RelativeLayout>

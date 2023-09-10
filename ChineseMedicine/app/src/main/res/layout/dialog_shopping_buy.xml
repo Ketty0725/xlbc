@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:hl_cornerRadius="10dp"
+        app:hl_cornerRadius_leftBottom="0dp"
+        app:hl_cornerRadius_rightBottom="0dp"
+        app:hl_layoutBackground="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_close"
+                app:tint="#5c5c5c"/>
+
+            <ImageView
+                android:id="@+id/iv_thumbnail"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_name"
+                android:layout_above="@+id/tv_name"
+                android:text="￥-"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#FF6E00"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/iv_thumbnail"
+                android:layout_alignBottom="@+id/iv_thumbnail"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="10dp"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:id="@+id/tg_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_thumbnail"
+                android:layout_marginStart="15dp"
+                android:layout_marginVertical="10dp"
+                android:text="数量"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <ImageView
+                android:id="@+id/iv_subtract"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_toStartOf="@+id/tv_number"
+                android:layout_alignBottom="@+id/tv_number"
+                android:src="@drawable/ic_subtract"/>
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_toStartOf="@+id/iv_add"
+                android:layout_alignBottom="@+id/iv_add"
+                android:layout_alignTop="@+id/iv_add"
+                android:gravity="center_vertical"
+                android:text="1"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignBottom="@+id/tg_number"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_add"/>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_instantly_buy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tg_number"
+                android:paddingVertical="10dp"
+                android:layout_marginVertical="15dp"
+                app:hl_cornerRadius="50dp"
+                app:hl_layoutBackground="#ff2442">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="立即购买"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </com.lihang.ShadowLayout>
+
+        </RelativeLayout>
+
+    </com.lihang.ShadowLayout>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/sl_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="24dp"
+        app:hl_shadowColor="@color/app_color_9b"
+        app:hl_shadowLimit="5dp"
+        app:hl_shadowOffsetX="1dp"
+        app:hl_shadowSymmetry="false"
+        app:hl_shadowHiddenRight="true"
+        app:hl_cornerRadius_leftTop="5dp"
+        app:hl_cornerRadius_leftBottom="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@color/white"/>
+
+    </com.lihang.ShadowLayout>
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/shadow_collapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:hl_shadowColor="@color/app_color_9b"
+        app:hl_shadowLimit="5dp"
+        app:hl_shadowOffsetX="1dp"
+        app:hl_shadowSymmetry="false"
+        app:hl_shadowHiddenRight="true"
+        app:hl_cornerRadius_leftTop="25dp"
+        app:hl_cornerRadius_leftBottom="25dp">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/ic_arrowhead"
+            app:tint="#cccccc" />
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="1dp"
+            android:ems="2"
+            android:text="收起"
+            android:textSize="12sp"
+            android:textColor="#6b6a6f"
+            android:lineSpacingMultiplier="0.7"
+            android:visibility="invisible"/>
+
+    </com.lihang.ShadowLayout>
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        app:clickable="false"
+        app:hl_layoutBackground="@color/white"
+        app:hl_cornerRadius="15dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ketty.chinesemedicine.component.SmoothCheckBox
+                android:id="@+id/scb"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                app:stroke_width="1dp"
+                app:color_checked="@color/red"
+                app:color_tick="@color/white"
+                app:color_unchecked="@color/white"
+                app:color_unchecked_stroke="#DCDCDC"/>
+
+            <ImageView
+                android:id="@+id/iv_thumbnail"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_toEndOf="@+id/scb"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/iv_thumbnail"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iv_thumbnail"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <ImageView
+                android:id="@+id/iv_subtract"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_toStartOf="@+id/tv_number"
+                android:layout_alignBottom="@+id/tv_number"
+                android:src="@drawable/ic_subtract"/>
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_toStartOf="@+id/iv_add"
+                android:layout_alignBottom="@+id/iv_add"
+                android:layout_alignTop="@+id/iv_add"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignBottom="@+id/tv_price"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_add"/>
+
+        </RelativeLayout>
+
+    </com.lihang.ShadowLayout>
+
+</LinearLayout>

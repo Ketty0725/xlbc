@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_rounded_rectangle"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_default"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_sign"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_circle"/>
+
+            <TextView
+                android:id="@+id/tv_first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="顾"
+                android:textSize="14sp"
+                android:textColor="#ffffff"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/rl_sign"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:text="顾凯迪"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tv_name"
+            android:layout_alignBaseline="@+id/tv_name"
+            android:text="13067620725"
+            android:textSize="12sp"
+            android:textColor="#999999"/>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/rl_sign"
+            android:layout_toStartOf="@+id/iv_alter"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="浙江省 宁波市 海曙区 高桥镇学院路899号宁波财经学院"
+            android:textSize="14sp"
+            android:textColor="#333333"/>
+
+        <ImageView
+            android:id="@+id/iv_alter"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_alter"
+            app:tint="#999999"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:text="删除"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:background="@drawable/bg_rounded_right"/>
+
+</LinearLayout>

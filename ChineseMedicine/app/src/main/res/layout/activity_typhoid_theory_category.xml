@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/typhoid_theory_category_scene"
+    tools:context=".main.home.typhoidtheory.TyphoidTheoryCategoryActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#58bec0">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp"
+            app:layout_behavior="com.yuruiyin.appbarlayoutbehavior.AppBarLayoutBehavior">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/ctl_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="#58bec0"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:id="@+id/lay_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    app:layout_collapseMode="parallax"/>
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    app:contentScrim="#58bec0"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginBottom="13dp">
+
+                        <ImageView
+                            android:id="@+id/iv_back"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_back"
+                            app:tint="@color/white"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.appbar.MaterialToolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/defaultColor"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="伤寒论查阅"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/shadow_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:hl_cornerRadius="50dp"
+        app:hl_layoutBackground="#f3f3f3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="8dp"
+                android:visibility="invisible"
+                android:src="@drawable/ic_search"
+                app:tint="#9b9ca1" />
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:text="请输入经方名或中药名"
+                android:textSize="14sp"
+                android:textColor="#9b9ca1" />
+
+        </LinearLayout>
+
+    </com.lihang.ShadowLayout>
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_search"
+        app:tint="#ffffff" />
+
+    <ImageView
+        android:id="@+id/iv_search_normal"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_search"
+        app:tint="#9b9ca1" />
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/sl_toggle_tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_marginTop="144dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:hl_layoutBackground="#58bec0"
+        app:hl_cornerRadius="5dp"
+        app:hl_strokeColor="@color/defaultColor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_prescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingVertical="3dp"
+                android:paddingHorizontal="13dp"
+                app:hl_cornerRadius="5dp"
+                app:hl_layoutBackground="@color/defaultColor">
+
+                <TextView
+                    android:id="@+id/tv_prescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查经方"
+                    android:textColor="#58bec0"
+                    android:textSize="13sp"/>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_chinese_herb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingVertical="3dp"
+                android:paddingHorizontal="13dp"
+                app:hl_cornerRadius="5dp"
+                app:hl_layoutBackground="#58bec0">
+
+                <TextView
+                    android:id="@+id/tv_chinese_herb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查中药"
+                    android:textColor="#ffffff"
+                    android:textSize="13sp"/>
+
+            </com.lihang.ShadowLayout>
+
+        </LinearLayout>
+
+    </com.lihang.ShadowLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

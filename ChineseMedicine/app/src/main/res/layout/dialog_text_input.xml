@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:hl_cornerRadius="15dp"
+        app:hl_cornerRadius_leftBottom="0dp"
+        app:hl_cornerRadius_rightBottom="0dp"
+        app:hl_layoutBackground="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="简介"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="确定"
+                android:textColor="#A6A6A6"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#F4F4F4"
+                android:layout_below="@+id/tv_confirm"/>
+
+            <EditText
+                android:id="@+id/et_about"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:hint="有趣的简介会吸引更多关注哦~"
+                android:textColorHint="@color/app_color_9b"
+                android:gravity="fill_horizontal"
+                android:layout_below="@+id/tv_confirm"/>
+
+        </RelativeLayout>
+
+    </com.lihang.ShadowLayout>
+
+</RelativeLayout>

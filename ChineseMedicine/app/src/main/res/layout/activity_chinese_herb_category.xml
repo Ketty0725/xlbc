@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.home.chineseherb.ChineseHerbCategoryActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_back"
+                app:tint="#999999"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="解表药"
+                android:textColor="#323232"
+                android:textSize="16sp"
+                android:layout_gravity="center"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="该项暂无数据"
+            android:textSize="18sp"
+            android:textColor="#333333"/>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_paraphrase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:hl_cornerRadius="20dp">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#E1E1E1"
+                    app:hl_stroke_dashWidth="5dp"
+                    app:hl_stroke_dashGap="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_tag"
+                                android:layout_marginEnd="5dp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="释义"
+                                android:textSize="16sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_paraphrase"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="解表药(drugs　for　relieving　Exterior　Disorder)，以发散表邪、解除表证为主要作用的一类中药。又称发表药。"
+                            android:textSize="14sp"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_classify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:hl_cornerRadius="20dp">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#E1E1E1"
+                    app:hl_stroke_dashWidth="5dp"
+                    app:hl_stroke_dashGap="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_tag"
+                                android:layout_marginEnd="5dp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="分类"
+                                android:textSize="16sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_classify"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="根据药性及适应证的不同，解表药可分为辛温解表药和辛凉解表药两类。\n\n①辛温解表药。辛以散风，温可祛寒，故有发散风寒的作用。又称发散风寒药。主要用于恶寒发热、无汗头痛、肢体酸痛、鼻塞涕清、喉痒咳嗽、苔薄白、脉浮紧或浮缓的风寒表证。常用药有麻黄、桂枝、细辛、紫苏叶、荆芥、防风、羌活、藁本、白芷、辛夷、苍耳子、鹅不食草、生姜、葱白、香薷、胡荽、柽柳等。\n\n②辛凉解表药。辛以散风，凉可祛热，故有发散风热的作用。又称发散风热药。主要用于发热恶寒、头痛目赤、咽痛口渴、舌尖红、苔薄白、脉浮数的风热表证，及温病初起、邪在卫分者。常用药有薄荷、牛蒡子、蝉蜕、菊花、桑叶、蔓荆子、淡豆豉、葛根、升麻、柴胡、浮萍、木贼等。此外，某些解表药还可用治表邪外束，麻疹不透；肌肤有湿，复感表邪，风疹瘙痒；肺失宣降，咳嗽气喘；风邪袭表，肺失宣降，风水水肿；风寒湿痹，肢节疼痛，痈疽初起，兼有表证；风热上攻，眩晕目赤，咽喉肿痛等证。"
+                            android:textSize="14sp"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_efficacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:hl_cornerRadius="20dp">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#E1E1E1"
+                    app:hl_stroke_dashWidth="5dp"
+                    app:hl_stroke_dashGap="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_tag"
+                                android:layout_marginEnd="5dp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="功用"
+                                android:textSize="16sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_efficacy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="此类药物质轻升浮，辛散轻扬，能促进人体发汗或微发汗，使表邪透散于外，达到治疗表证，防止表邪内传，控制疾病传变的目的。部分解表药还有宣毒透疹、宣肺化痰、止咳平喘、利尿消肿、祛风除湿、通痹止痛、透散毒邪、解表消疮、清利头目、利咽消肿等作用。"
+                            android:textSize="14sp"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_matching_features"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:hl_cornerRadius="20dp">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#E1E1E1"
+                    app:hl_stroke_dashWidth="5dp"
+                    app:hl_stroke_dashGap="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_tag"
+                                android:layout_marginEnd="5dp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="配伍特点"
+                                android:textSize="16sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_matching_features"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="使用解表药时，由于四时气候的差异，冬季多风寒，春季多风热，夏季夹暑湿，秋季兼燥邪，故除针对风寒、风热，选择相应的辛温解表药和辛凉解表药外，还须根据兼邪的不同，分别与祛暑药、化湿药、润燥药等配伍应用。若虚人外感，正虚邪实，难以祛散表邪者，又应根据体质不同，分别与补气、助阳、滋阴、养血等补虚药同用。小儿外感，因年龄体质与成年人不同，又有夹痰、滞、惊的不同兼证，亦当兼顾，如感冒夹痰、咳嗽气喘者，须配化痰止咳药；感冒夹食、腹胀纳差者，当配消导药；感冒夹惊、惊痫夜啼者，当配熄风止痉药。"
+                            android:textSize="14sp"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_medication_attention"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:hl_cornerRadius="20dp">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#E1E1E1"
+                    app:hl_stroke_dashWidth="5dp"
+                    app:hl_stroke_dashGap="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_tag"
+                                android:layout_marginEnd="5dp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="用药注意"
+                                android:textSize="16sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_medication_attention"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="解表药的用药剂量应随季节的变化增减。春夏腠理疏松、容易出汗，用量宜轻；秋冬腠理致密、不易出汗，用量宜重，但均要中病即止，不可过量。表虚自汗、阴虚盗汗，以及久患疮疡、淋证、尿血的患者，虽有外感表证，也须慎用。解表药多为辛散轻扬之品，不能久煎，以免有效成分挥发而影响药效。"
+                            android:textSize="14sp"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_modern_research"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:hl_cornerRadius="20dp">
+
+                <com.lihang.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_strokeColor="#E1E1E1"
+                    app:hl_stroke_dashWidth="5dp"
+                    app:hl_stroke_dashGap="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_tag"
+                                android:layout_marginEnd="5dp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="现代研究"
+                                android:textSize="16sp"
+                                android:textColor="#333333"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_modern_research"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="解表药有不同程度的发汗、解热、镇痛作用，对多种致病细菌、流行性感冒病毒也有抑制作用。部分药物还有降压及改善心、脑血液循环的作用。解表药分别对西医诊为一般感冒、流行性感冒、上呼吸道感染、流行性脑脊髓膜炎、乙型脑炎初起、麻疹、支气管炎、肺炎、哮喘、急性肾炎、风湿性关节炎、化脓性皮肤病等都有一定的治疗作用，部分药物还可用于防治高血压、冠心病、脑血管病及突发性耳聋等病。"
+                            android:textSize="14sp"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                </com.lihang.ShadowLayout>
+
+            </com.lihang.ShadowLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/shadow_unfold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        app:hl_shadowColor="@color/app_color_9b"
+        app:hl_shadowLimit="5dp"
+        app:hl_shadowOffsetX="1dp"
+        app:hl_shadowSymmetry="false"
+        app:hl_shadowHiddenRight="true"
+        app:hl_cornerRadius_leftTop="25dp"
+        app:hl_cornerRadius_leftBottom="25dp">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/ic_arrowhead"
+            app:tint="#cccccc"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="1dp"
+            android:ems="2"
+            android:text="目录"
+            android:textSize="12sp"
+            android:textColor="#6b6a6f"
+            android:lineSpacingMultiplier="0.7"/>
+
+    </com.lihang.ShadowLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/red"/>
+
+</RelativeLayout>

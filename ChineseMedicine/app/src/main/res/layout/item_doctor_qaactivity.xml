@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_layoutBackground="@color/white"
+        app:hl_cornerRadius="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ic_ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_ask"/>
+
+            <TextView
+                android:id="@+id/tv_ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/ic_ask"
+                android:layout_alignTop="@id/ic_ask"
+                android:text=""
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+
+            <ImageView
+                android:id="@+id/ic_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ic_ask"
+                android:src="@drawable/ic_answer"/>
+
+            <TextView
+                android:id="@+id/tv_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/ic_answer"
+                android:layout_alignTop="@id/ic_answer"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="#666666"/>
+
+        </RelativeLayout>
+
+    </com.lihang.ShadowLayout>
+
+</LinearLayout>
